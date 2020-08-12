@@ -1,0 +1,18 @@
+Astina\Bundle\RedirectManagerBundle\Entity\MapStats:
+    type: entity
+    table: armb_redirect_map_stats
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        date:
+            type: datetime
+        count:
+            type: integer
+    manyToOne:
+        map:
+            targetEntity: Astina\Bundle\RedirectManagerBundle\Entity\Map
+            joinColumn: { onDelete: "set null" }
+    lifecycleCallbacks: {  }
