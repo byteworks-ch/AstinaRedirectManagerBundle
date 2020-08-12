@@ -7,5 +7,4 @@ namespace Astina\Bundle\RedirectManagerBundle\Service;
  */
 class RedirectFinder extends \Astina\Bundle\RedirectManagerBundle\Redirect\RedirectFinder
 {
-
 }

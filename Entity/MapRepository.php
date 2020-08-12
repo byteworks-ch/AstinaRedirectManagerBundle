@@ -14,7 +14,6 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
  */
 class MapRepository extends EntityRepository
 {
-
     public function findAll()
     {
         return $this->createQueryBuilder('m')
@@ -96,8 +95,8 @@ class MapRepository extends EntityRepository
         $expr = $qb->expr();
 
         return $qb->where(
-                $expr->orX('m.urlFrom = :path', 'm.urlFrom = :url')
-            )
+            $expr->orX('m.urlFrom = :path', 'm.urlFrom = :url')
+        )
             ->orWhere(
                 $expr->andX('m.urlFromIsRegexPattern is not null', 'm.urlFromIsRegexPattern <> 0')
             )
@@ -126,5 +125,4 @@ class MapRepository extends EntityRepository
 
         return current($maps);
     }
-
 }

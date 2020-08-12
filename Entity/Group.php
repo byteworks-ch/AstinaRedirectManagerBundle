@@ -10,7 +10,7 @@ class Group
 
     private $priority = 0;
 
-    function __toString()
+    public function __toString()
     {
         return $this->name;
     }

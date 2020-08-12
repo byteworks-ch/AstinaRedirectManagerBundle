@@ -30,7 +30,7 @@ class Map
     /**
      * @var boolean
      */
-    private $urlFromIsNoCase;    
+    private $urlFromIsNoCase;
 
     /**
      * @var string $urlTo

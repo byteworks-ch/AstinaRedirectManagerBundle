@@ -66,7 +66,6 @@ class ImportUrlsCommand extends ContainerAwareCommand
             $count = $csvImporter->import($file, $redirectCode, $countRedirects, $output);
 
             $output->writeln(sprintf('<info>Successfully imported %d url redirects.</info>', $count));
-
         } else {
             $output->writeln(sprintf('<error>File `%s` doesn\'t exists or is unreadable.</error>', $file));
         }
